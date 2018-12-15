@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% extends 'flitting/base.html' %}
+
+<!-- Content -->
+{% block content %}
+<div class = "container">
+    <div class="row justify-content-center">
+        <div class="col-11" id= "Pending Requests">
+                <div class="card border-dark mb-3">
+                    <div class="card-header bg-dark text-white text-uppercase">
+                        <a href="#" style="color:white;"><i class="fa fa-align-justify"></i> My Pending Requests</a>
+                        <a href="#" style="color:white;"><i class="fa fa-align-justify pl-2"></i> Accepted Requests</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Request title</h5>
+                                        <p class="card-text">Description <br>Add more text here describing the request</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <a href="#" class="card-link">View Request</a>
+                                    </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Request title</h5>
+                                        <p class="card-text">Description <br>Add more text here describing the request</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <a href="#"><li class="list-group-item">Completed By</li></a>
+                                    </ul>
+                                    <div class="card-body">
+                                        <a href="#" class="card-link">View Request</a>
+                                    </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Request title</h5>
+                                        <p class="card-text">Description <br>Add more text here describing the request</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <a href="#" class="card-link">View Request</a>
+                                    </div>
+                            </div>
+
+                            <a href="#" class="align-self-end btn btn-lg btn-block btn-primary"><i class="fa fa-plus-circle pl-2"></i> New Listing</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

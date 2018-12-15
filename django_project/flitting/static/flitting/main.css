@@ -1,0 +1,208 @@
+body {
+  background: #fafafa;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+/*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+.category_block li:hover {
+    background-color: #007bff;
+}
+.category_block li:hover a {
+    color: #ffffff;
+}
+.category_block li a {
+    color: #343a40;
+}
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+.product_rassurance .list-inline {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product_rassurance .list-inline li:hover {
+    color: #343a40;
+}
+.reviews_product .fa-star {
+    color: gold;
+}
+.pagination {
+    margin-top: 20px;
+}
+
+.jumbotron {
+    background-size: cover;
+    height: 120px;
+    padding-top: 10px;
+  }
+
+.card {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.icon {
+    padding: 18px 28px;
+    font-size: 35px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    padding-bottom: 21px;
+
+}
+
+.dropdown-menu{
+    left: -40px;
+    text-align: left;
+    width :auto;
+}
+
+.dropdown-item{
+    color: white;
+    text-align: left;
+}
+
+.dropdown-header{
+    color:#35b1b9;
+    font-size: 90%;
+    text-align: center;
+}
+.dropdown-toggle::after {
+    display:none;
+}
+
+.table tr td{
+    margin-right:10px;
+  }
+
+.table tr td:last-child {
+margin-right:0;
+}
+
+.d-block{
+    width:100%;
+    padding-bottom: 20px;
+}
+
+.requests-form{
+    width: 30%;
+    padding-bottom: 30px;
+}
+
+.footer {
+        left: 0;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        background-color:  #343a40;
+        color: #ffffff;
+        text-align: right;
+        bottom: 0px;
+    }
+
+.flitting-copyright{
+    text-align: center;
+    margin-top: 10px;
+    margin-block-start: 35px;
+    margin-left: 90px;
+    color:  white;
+    padding-block-start: 35px;
+}
+
+
+@media screen and (max-width: 820px) {
+    .flex-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-flex-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .flex-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-flex-container {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}

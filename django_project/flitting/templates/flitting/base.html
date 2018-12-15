@@ -1,0 +1,108 @@
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full'%}
+{{ form.media }}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Site meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Base template</title>
+    <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel = "stylesheet" type= 'text/css' href ="{%static 'flitting/main.css'%}">
+</head>
+<body>
+
+<!-- Navigation bar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+          <a href="{%url 'flitting-home'%}">
+              <img style = "height:40px; width:50px:" src="{% static "flitting/flitting.jpg" %}" href="{%url 'flitting-home'%}"></img>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationbar" aria-controls="navigationbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigationbar">
+              <ul class="navbar-nav m-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="{%url 'flitting-home'%}"></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{%url 'flitting-home'%}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{%url 'flitting-about'%}">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{%url 'blog-home'%}">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{%url 'flitting-team'%}">Team</a>
+                  </li>
+                  {% if user.is_authenticated %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{%url 'listing-home'%}">Listings</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{%url 'request-home'%}">Requests</a>
+                  </li>
+                  <li class="nav-item nav-link">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="seachtext">
+                          <div class="input-group-append">
+                            <button class=" nav-item btn btn-secondary btn-number" onclick="search()"">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-item nav-link" href="{%url 'flitting-profile'%}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-item nav-link" href="{%url 'logout'%}">Logout</a>
+                    </li>
+                      {%else%}
+                      <li class="nav-item">
+                        <a class="nav-item nav-link" href="{%url 'login'%}">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-item nav-link" href="{%url 'flitting-register'%}">Register</a>
+                      </li>
+                      {%endif%}
+                  </ul>
+          </div>
+      </div>
+  </nav>
+
+  <section class="jumbotron text-left" style = "background-image: url({% static "flitting/header.jpg" %});">
+      <div class="container">
+          <h1 class="jumbotron-heading">Flitting</h1>
+          <h3 class="jumbotron-heading">We are here to help</h3>
+      </div>
+  </section>
+  <!-- <div class = "container"> -->
+    {% block content %}{% endblock %}
+  
+    <div class="footer">
+        <div class="flitting-copyright" >Flitting &copy; 2018. All Rights Reserved.</div>
+    </div>
+
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" type="text/javascript"></script>
+  <script>
+    function search(){
+      search = document.getElementById("seachtext").value
+      const url='http://localhost:8000/flitting/request/search?q=' + search;
+      window.location.replace(url);
+    }
+  </script>
+</body>
+</html>

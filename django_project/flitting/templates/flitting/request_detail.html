@@ -1,0 +1,31 @@
+{% extends "flitting/base.html"%}
+{%block content%}
+<div class = "container">
+  <article class="media content-section">
+   <img src= '{{object.helper.profile.image.url}}' style= "height :80px" class = "rounded-circle article-img" >
+   <div class="media-body">
+     <div class="article-metadata">
+      <div class="text-muted" style="margin-left:30px; font-size:20px"> Helper:
+       <a class="mr-2" style="color:black">{{object.helper}}</a>
+       </div>
+       <div class="text-muted" style="margin-left:30px; font-size:20px"> Newbie:
+       <a class="mr-2" style="color:black">{{object.newbie}}</a>
+       </div>
+       <small class="text-muted" style="margin-left:30px;font-size:15px">{{object.date_posted|date:"F d, Y"}}</small>
+     </div>
+     <br>
+     <div class="article-content" style="margin-left:30px; font-size:15px; font-style:italic;">{{ object.description }}</div>
+     <br>
+     <div>
+     <a class="article-title" style="margin-left:30px; font-size:15px" >{{ object.startDate }}</a>
+     <a class="article-title" style="margin-left:30px; font-size:15px" >{{ object.endDate }}</a>
+    </div>
+     <p class="article-title" style="margin-left:30px; font-size:15px" >Accepted: {{ object.isAccepted }}</p>
+     {% if object.helper == user%}
+     <a class="btn btn-success btn-sm mt-1 mb-1" href="{%url 'request-update' object.id%}" style="margin-left:30px;">Update</a>
+     <a class="btn btn-danger btn-sm mt-1 mb-1" href="{%url 'request-delete' object.id%}">Delete</a>
+     {%endif%}
+   </div>
+  </article>
+</div>
+{%endblock content%}

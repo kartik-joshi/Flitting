@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/house">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/helperCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/translucent_white"
+                app:cardElevation="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/helperImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_launcher_foreground"
+                        app:civ_circle_background_color="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/listingDateText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColor="#000"
+                        app:layout_constraintBottom_toTopOf="@+id/helperEmailText"
+                        app:layout_constraintLeft_toRightOf="@id/helperImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        android:drawableStart="@drawable/ic_location_black_small"
+                        tools:text="Syracuse, NY" />
+
+                    <TextView
+                        android:id="@+id/helperEmailText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColor="#000"
+                        app:layout_constraintBottom_toTopOf="@+id/helperPhoneText"
+                        app:layout_constraintLeft_toRightOf="@id/helperImage"
+                        app:layout_constraintTop_toBottomOf="@+id/listingDateText"
+                        tools:text="john.doe@gmail.com" />
+
+                    <TextView
+                        android:id="@+id/helperPhoneText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColor="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/helperImage"
+                        app:layout_constraintTop_toBottomOf="@+id/helperEmailText"
+                        tools:text="+1 324 234 2342" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/listingDescriptionCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/translucent_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/helperCard">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:theme="@style/TextInputLayoutAppearance">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/description"
+                        android:maxLines="4"
+                        android:minLines="1"
+                        android:paddingTop="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </android.support.design.widget.TextInputLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/categoryCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/translucent_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/listingDescriptionCard">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:theme="@style/TextInputLayoutAppearance">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/categories"
+                        android:maxLines="4"
+                        android:minLines="1"
+                        android:paddingTop="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </android.support.design.widget.TextInputLayout>
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/filesCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/translucent_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryCard">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/filesTitle"
+                        style="@style/CardTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/files" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        app:flexDirection="row"
+                        app:flexWrap="wrap"
+                        app:justifyContent="flex_end"
+                        app:layout_constraintTop_toBottomOf="@id/filesTitle">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="4dp"
+                            android:background="#fff" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="4dp"
+                            android:background="#fff" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="4dp"
+                            android:background="#fff" />
+                    </com.google.android.flexbox.FlexboxLayout>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.design.card.MaterialCardView>
+
+            <!--to add some padding at the bottom-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toBottomOf="@id/filesCard" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--<android.support.design.card.MaterialCardView-->
+    <!--style="@style/FloatingButtonStyle"-->
+    <!--app:layout_anchor="@id/nestedScrollView"-->
+    <!--app:layout_anchorGravity="center_horizontal|bottom">-->
+
+    <android.support.design.button.MaterialButton
+        style="@style/InnerFloatingButtonStyle"
+        android:text="@string/save_listing"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:cornerRadius="28dp"
+        android:layout_gravity="center_horizontal"
+        app:icon="@drawable/ic_arrow_forward_white_24dp"
+        app:layout_anchor="@id/nestedScrollView"
+        app:layout_anchorGravity="bottom|center_horizontal" />
+    <!--</android.support.design.card.MaterialCardView>-->
+
+</android.support.design.widget.CoordinatorLayout>

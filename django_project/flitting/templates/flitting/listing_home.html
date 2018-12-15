@@ -1,0 +1,27 @@
+{% extends "flitting/base.html"%}
+{%block content%}
+<div class = "container">
+  {% for List in Listing %}
+  <article class="media content-section">
+    <img src= '{{List.user.profile.image.url}}' style= "height :80px;" class = "rounded-circle article-img" >
+   <div class="media-body">
+     <div class="article-metadata">
+       <a style="margin-left:30px; font-size:30px">{{ List.user }}</a>
+       <div>
+       <small class="text-muted" style="margin-left:30px;font-size:15px" >{{ List.date_posted|date:"F d, Y" }}</small>
+       </div>
+     </div>
+      <a class="article-title" href="{% url 'listing-detail' List.id%}" style="margin-left:30px; font-size:20px;">{{ List.city }}, </a>
+      <a class="article-title" href="{% url 'listing-detail' List.id%}" style="font-size:20px;">{{ List.country }}</a>
+      <br>
+      <br>
+      <p class="text-justify" style="margin-left:30px;">
+      <a class="article-content"style="font-size:15px;font-style: italic;">{{ List.description }}</a>
+      </p>
+      <h4><a class="btn btn-info btn-md mt-1 mb-1" href="{% url 'listing-detail' List.id%}" style="float:left;margin-left:30px">Details</a></h4>
+   </div>
+  </article>
+  {% endfor %}
+  <a class="btn btn-secondary btn-lg mt-1 mb-1" href="{%url 'listing-create'%}">Add New Listing</a>
+</div>
+{%endblock content%}

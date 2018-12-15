@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/translucent_white"
+    app:cardPreventCornerOverlap="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/requestImage"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:tint="#fff"
+            android:src="@drawable/ic_launcher_foreground"
+            app:civ_circle_background_color="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/requestFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/from"
+            android:textColor="@color/materialGreyDark"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/requestImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/requestSender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:maxLines="2"
+            android:text="Sheeraja Rajakrishnan"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/requestFrom"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toRightOf="@id/requestFrom"
+            app:layout_constraintRight_toLeftOf="@id/requestDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/requestMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="@string/message"
+            android:textColor="@color/materialGreyDark"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/requestFrom"
+            app:layout_constraintTop_toBottomOf="@id/requestSender" />
+
+        <TextView
+            android:id="@+id/requestText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="James Bond James Bond James sahdlfkjhs sdklfh asldfj hasldfj ashl  sdfjhsdlf "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/requestAcceptButton"
+            app:layout_constraintLeft_toLeftOf="@id/requestFrom"
+            app:layout_constraintRight_toRightOf="@id/requestAcceptButton"
+            app:layout_constraintTop_toBottomOf="@id/requestMessage" />
+
+        <TextView
+            android:id="@+id/requestDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:gravity="center_vertical|end"
+            android:padding="8dp"
+            android:text="10/11"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/requestSender"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/requestRejectButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:elevation="4dp"
+            android:text="@string/reject"
+            android:theme="@style/CardButtonStyle"
+            app:backgroundTint="@color/materialRedAccent"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_home_black_24dp"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/requestAcceptButton"
+            app:layout_constraintTop_toBottomOf="@id/requestText"
+            app:layout_constraintVertical_bias="1" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/requestAcceptButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_margin="0dp"
+            android:elevation="4dp"
+            android:padding="0dp"
+            android:text="@string/accept"
+            android:theme="@style/CardButtonStyle"
+            app:backgroundTint="@color/materialGreen"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_done_white_24dp"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/requestRejectButton"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestText"
+            app:layout_constraintVertical_bias="1" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.card.MaterialCardView>

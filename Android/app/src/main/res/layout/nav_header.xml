@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:background="@color/materialGreyLight"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/helperImage"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_launcher_foreground"
+        app:civ_circle_background_color="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/listingDateText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textColor="#000"
+        app:layout_constraintBottom_toTopOf="@+id/helperEmailText"
+        app:layout_constraintLeft_toRightOf="@id/helperImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:text="John Doe" />
+
+    <TextView
+        android:id="@+id/helperEmailText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textColor="#000"
+        app:layout_constraintLeft_toRightOf="@id/helperImage"
+        app:layout_constraintTop_toBottomOf="@+id/listingDateText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="john.doe@gmail.com" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,34 @@
+{% extends "flitting/base.html"%}
+{%block content%}
+<div class = "container">
+  {% for Requst in Requests %}
+  <article class="media content-section">
+    <img src= '{{Requst.newbie.profile.image.url}}' style= "height :80px" class = "rounded-circle article-img" >
+   <div class="media-body">
+     <div class="article-metadata">
+       <div class="text-muted" style="margin-left:30px; font-size:20px"> Newbie:
+       <a class="mr-2"  style="font-size:20px;color: black">{{ Requst.newbie}}</a>
+      </div>
+      <div class="text-muted" style="margin-left:30px; font-size:20px"> Helper:
+       <a class="mr-2"  style="font-size:20px;color: black">{{ Requst.helper}}</a>
+      </div>
+       <div>
+       <small class="text-muted" style="margin-left:30px;font-size:15px">{{ Requst.date_posted|date:"F d, Y" }}</small>
+      </div>
+     </div>
+     <br>
+     <p class="text-justify" style="margin-left:30px;">
+     <a class="article-title" style="font-size:15px; font-style:italic;">{{Requst.listing}}</a>
+    </p>
+     <div>
+     <a class="article-title" style="margin-left:30px; font-size:15px">{{Requst.startDate}}</a>
+     <a class="article-title" style="margin-left:30px; font-size:15px">{{Requst.endDate }}</a>
+    </div>
+     <p class="article-content" style="margin-left:30px; font-size:15px!important">{{Request.description}}</p>
+     <h4><a class="btn btn-info btn-md mt-1 mb-1" href="{% url 'request-detail' Requst.id%}" style="float:left;margin-left:30px">Details</a></h4>
+   </div>
+  </article>
+  {% endfor %}
+  <a class="btn btn-secondary btn-md mt-1 mb-1" href="{% url 'request-create'%}">Add New Request</a>
+</div>
+{%endblock content%}

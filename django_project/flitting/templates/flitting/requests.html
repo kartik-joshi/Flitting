@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% extends 'base-login.html' %}
+
+<!-- Content -->
+{% block content %}
+<div class = "container">
+  <div class="container mb-4">
+      <div class="row justify-content-center">
+      <div class="col-5 ">
+          <h2>Request Form</h2>
+
+          <form id="requests-form" class="form-control needs-validation" data-toggle="validator" role="form" novalidate>
+
+
+              <div id="description" class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control"  rows="4" cols="55" maxlength="500">Description</textarea>
+              </div>
+
+              <div id="startDate" class="form-group">
+                  <label for="startdate">Start Date</label>
+                  <input type="text" id="fname" class="form-control" name="startDate" placeholder="Enter the start date" required>
+              </div>
+
+
+              <div id="endDate" class="form-group">
+                      <label for="enddate">End Date</label>
+                      <input id="endDate" type="text" class="form-control" name="endDate" placeholder="Enter the end date" required>
+              </div>
+
+              </br>
+              <input type="button" id="back" class="btn btn-primary" value="Cancel"/>
+
+              <input id="submitRequest" type="submit" class="btn btn-success btn-md ml-3" value="Submit" style="float:right">
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

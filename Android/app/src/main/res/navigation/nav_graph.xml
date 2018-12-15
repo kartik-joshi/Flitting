@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.skaka.flittingk.main.home.HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_viewProfileFragment2"
+            app:destination="@id/viewProfileFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewListingsFragment"
+            app:destination="@id/viewListingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewRequestsFragment"
+            app:destination="@id/viewRequestsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allConversationsFragment"
+            app:destination="@id/allConversationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewProfileFragment2"
+        android:name="com.skaka.flittingk.main.profile.ViewProfileFragment">
+        <action
+            android:id="@+id/action_viewProfileFragment2_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.skaka.flittingk.main.profile.EditProfileFragment" />
+    <fragment
+        android:id="@+id/viewListingsFragment"
+        android:name="com.skaka.flittingk.main.listing.ViewListingsFragment">
+        <action
+            android:id="@+id/action_viewListingsFragment_to_viewSingleListingFragment"
+            app:destination="@id/viewSingleListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewSingleRequestFragment"
+        android:name="com.skaka.flittingk.main.request.ViewSingleRequestFragment">
+        <action
+            android:id="@+id/action_viewSingleRequestFragment_to_conversationFragment"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewSingleListingFragment"
+        android:name="com.skaka.flittingk.main.listing.ViewSingleListingFragment">
+        <action
+            android:id="@+id/action_viewSingleListingFragment_to_editListingFragment"
+            app:destination="@id/editListingFragment" />
+        <action android:id="@+id/action_viewSingleListingFragment_to_editRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editListingFragment"
+        android:name="com.skaka.flittingk.main.listing.EditListingFragment" />
+    <fragment
+        android:id="@+id/viewRequestsFragment"
+        android:name="com.skaka.flittingk.main.request.ViewRequestsFragment">
+        <action
+            android:id="@+id/action_viewRequestsFragment_to_viewSingleRequestFragment"
+            app:destination="@id/viewSingleRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRequestFragment"
+        android:name="com.skaka.flittingk.main.request.EditRequestFragment" />
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.skaka.flittingk.main.chat.ConversationFragment"
+        tools:layout="@layout/fragment_conversation" />
+    <fragment
+        android:id="@+id/allConversationsFragment"
+        android:name="com.skaka.flittingk.main.chat.AllConversationsFragment">
+        <action
+            android:id="@+id/action_allConversationsFragment_to_conversationFragment"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+</navigation>

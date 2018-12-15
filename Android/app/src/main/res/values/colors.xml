@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <color name="colorPrimary">@color/materialBlue</color>
+    <color name="colorPrimaryDark">@color/materialBlueDark</color>
+    <color name="colorAccent">#d81b1b</color>
+    <color name="translucent_white">#eeffffff</color>
+    <color name="green">#4b4</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000</color>
+</resources>
